@@ -13,28 +13,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot Control HAL
+# Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl \
-    android.hardware.boot@1.1-impl.recovery \
-    android.hardware.boot@1.1-service
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service
 
-# bootctrl HAL    
 PRODUCT_PACKAGES += \
-    bootctrl.default \
-    bootctrl.unisoc \
-    bootctrl.unisoc.recovery
- 
-PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
-    update_engine \
-    update_verifier \
-    update_engine_sideload \
-    checkpoint_gc 
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    bootctrl.saturn
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.saturn \
