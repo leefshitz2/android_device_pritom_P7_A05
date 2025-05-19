@@ -12,6 +12,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
 # Boot Control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl \
@@ -33,7 +34,7 @@ PRODUCT_PACKAGES += \
     checkpoint_gc 
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctl    
+    bootctl
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.saturn \
