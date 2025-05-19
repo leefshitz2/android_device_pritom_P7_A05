@@ -1,0 +1,28 @@
+on early-init
+    setprop sys.usb.configfs 1
+    insmod /axp803_usb_power.ko
+    insmod /axp2202_usb_power.ko
+    insmod /init-input.ko
+    insmod /gt9xx.ko
+    insmod /gslX680new.ko
+    insmod /sunxi-hci.ko
+    insmod /ehci-sunxi.ko
+    insmod /ohci-hcd.ko
+    insmod /ohci-sunxi.ko
+    insmod /sunxi_usb_udc.ko
+    insmod /sunxi_usbc.ko
+    insmod /usbserial.ko
+    insmod /usb_wwan.ko
+    insmod /sunxi-lradc.ko
+    insmod /axp2101-pek.ko
+    insmod /pinctrl-leds.ko
+
+on property:ro.debuggable=1
+    start console
+
+service console /system/bin/sh
+    console
+    user root
+    group root shell log readproc
+    seclabel u:r:shell:s0
+    setenv HOSTNAME console
