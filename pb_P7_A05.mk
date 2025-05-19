@@ -16,7 +16,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 $(call inherit-product, device/pritom/P7_A05/device.mk)
 
 PRODUCT_DEVICE := P7_A05
-PRODUCT_NAME := omni_P7_A05
+PRODUCT_NAME := pb_P7_A05
 PRODUCT_BRAND := PRITOM
 PRODUCT_MODEL := P7
 PRODUCT_MANUFACTURER := pritom
