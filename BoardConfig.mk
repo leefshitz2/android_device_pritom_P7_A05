@@ -120,6 +120,12 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 
 # TWRP Configuration
+TW_ROTATION := 90
+TARGET_SCREEN_DENSITY := 160 
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_SCREEN_WIDTH := 640
+TW_SCREEN_HEIGHT := 1024
+TW_OVERRIDE_SYSTEM_PROPS := "ro.sf.lcd_density=200"
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := false
