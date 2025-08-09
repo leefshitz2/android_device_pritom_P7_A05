@@ -77,6 +77,10 @@ else
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 endif
 
+#Debug
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+
 #My 1 TEST 
 BOARD_VENDOR_CMDLINE := loop.max_part=4 mmcblk.perdev_minors=16 firmware_class.path=/vendor/etc/firmware bootconfig
 BOARD_KERNEL_BASE := 0x40078000
